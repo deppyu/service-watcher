@@ -11,7 +11,7 @@ development:
 production:
   sessions:
     default:
-      host:
+      hosts:
         - localhost: 27017
       database: observice
   options: &dev_options
