@@ -20,6 +20,6 @@
 # Learn more: http://github.com/javan/whenever
 set :environment, 'production'
 
-every :day,:at => '11:35 am' do
+every :day,:at => '02:30 am' do
   rake "observice:check",:output => {:error=>'log/error.log',:standard => 'log/development.log'}
 end

@@ -15,6 +15,8 @@ app_check 'domain' do |ssh,app_name|
     context = ssh.exec!("cat #{file}")
     server_names = context.scan(/server_name.+;/)
     ports = context.scan(/listen.+;/)
+    server_names = server_names.collect{|server_name| server_name.slice(/\s+.+$/).strip}
+    ports = ports.collect{|port| port.slice(/\s+.+$/).strip}
     [server_names,ports].to_s
   rescue Exception => ex
     ex.message
