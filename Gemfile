@@ -40,7 +40,7 @@ gem 'slim-rails'
 # Deploy
 gem 'rvm'
 gem 'rvm-capistrano'
-gem 'capistrano'
+gem 'capistrano','3.2.1'
 gem 'capistrano-ext'
 gem 'capistrano-unicorn', :require => false
 gem 'unicorn'
