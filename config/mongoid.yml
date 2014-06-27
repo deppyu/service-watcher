@@ -1,0 +1,17 @@
+# encoding: utf-8
+development:
+  sessions:
+    default:
+      hosts:
+        - localhost:27017
+      database: observice
+  options: &dev_options
+    #allow_dynamic_fields: false
+
+test:
+  sessions:
+    default:
+      hosts:
+        - localhost:27017
+      database: observice_test
+  options: *dev_options

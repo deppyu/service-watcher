@@ -1,0 +1,18 @@
+table
+ thead
+  th width= '15%' server_ip
+  th width= '15%' app_name
+  th width= '15%' check_option
+  th width= '15%' operation_time
+  th width= '*%' data
+
+  tbody
+    - @logs.each do |log|
+     tr
+      td =log.server_ip
+      td =log.app_name || '无'
+      td =log.check_option
+      td =transclate_time(log.created_at)
+      td =log.data
+
+
