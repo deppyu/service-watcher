@@ -3,7 +3,7 @@ set :use_sudo, false
 set :deploy_timestamped, true
 set :release_name, Time.now.localtime.strftime("%Y%m%d%H%M%S")
 set :keep_releases, 5
-set :rvm_ruby_version, "2.0.0"
+set :rvm_ruby_version, "1.25.19"
 
 set :linked_files, %w{config/config.yml config/mongoid.yml config/unicorn.rb}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets public/system config/full_lists}
@@ -48,7 +48,7 @@ namespace :deploy do
   end
 
   after :finishing, 'deploy:cleanup'
-  after :finishing, :copy_sync_scripts
+  #after :finishing, :copy_sync_scripts
 end
 
 
