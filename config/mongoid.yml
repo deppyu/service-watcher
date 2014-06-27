@@ -8,6 +8,14 @@ development:
   options: &dev_options
     #allow_dynamic_fields: false
 
+production:
+  sessions:
+    default:
+      host:
+        - localhost: 27017
+      database: observice
+  options: &dev_options
+
 test:
   sessions:
     default:
