@@ -40,6 +40,7 @@ gem 'slim-rails'
 gem 'rvm'
 gem 'rvm-capistrano'
 gem 'capistrano'
+gem 'capistrano-ext'
 gem 'capistrano-unicorn', :require => false
 gem 'unicorn'
 gem "deploy_helper", :git => "git@g.edr.im:gems/deploy_helper.git", :require => false, :branch => :master
