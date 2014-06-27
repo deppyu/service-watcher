@@ -22,7 +22,7 @@ preload_app true
 
 # we use a shorter backlog for quicker failover when busy
 # 可同时监听 Unix 本地 socket 或 TCP 端口
-listen "#{APP_ROOT}/tmp/observice.sock", :backlog => 64
+listen "#{APP_ROOT}/tmp/sockets/observice.sock", :backlog => 64
 # 如果不需要使用 nginx 或 apache 做反向代理，可以直接监听端口，使用端口访问
 #listen 8083, :tcp_nopush => true
 

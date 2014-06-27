@@ -3,6 +3,7 @@ source 'http://ruby.taobao.org'
 
 #source 'https://rubygems.org'
 #gem 'ruby', '2.1.1'
+gem 'rake', '10.3.2'
 
 gem 'rails', '4.1.1'
 

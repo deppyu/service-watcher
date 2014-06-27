@@ -41,6 +41,12 @@ namespace :deploy do
     end
   end
 
+  task :spec_ruby_version do
+    on roles(:app) do
+      run "echo rvm use 2.0.0 > #{release_path}/.rvmrc"
+    end
+  end
+
   task :copy_sync_scripts do
     on roles(:app) do
       execute("cd #{release_path}; cp -r script/sync_scripts/* ~/#{fetch(:stage)}_sync_scripts")
@@ -49,6 +55,7 @@ namespace :deploy do
 
   after :finishing, 'deploy:cleanup'
   #after :finishing, :copy_sync_scripts
+  after :finishing, 'deploy:spec_ruby_version'
 end
 
 
