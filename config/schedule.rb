@@ -18,7 +18,7 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
-set :environment, 'development'
+set :environment, 'production'
 
 every :day,:at => '11:35 am' do
   rake "observice:check",:output => {:error=>'log/error.log',:standard => 'log/development.log'}
