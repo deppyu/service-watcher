@@ -43,7 +43,7 @@ namespace :deploy do
 
   task :spec_ruby_version do
     on roles(:app) do
-      run "echo rvm use 2.0.0 > #{release_path}/.rvmrc"
+      execute("echo rvm use 2.0.0 > #{release_path}/.rvmrc")
     end
   end
 
