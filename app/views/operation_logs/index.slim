@@ -1,3 +1,9 @@
+= form_tag root_path,method: :get
+ = select_tag 'check_option',options_for_select(@options)
+ = date_field_tag 'date'
+ = submit_tag '提交'
+
+
 table
  thead
   th width= '15%' server_ip
