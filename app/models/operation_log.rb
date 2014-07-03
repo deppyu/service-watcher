@@ -8,4 +8,6 @@ class OperationLog
   field :check_option, type: String # 检查项名称
   #field :shell_command, type: String # 操作命令
   field :data,type: String #操作结果
+
+  index({server_ip: 1,app_name: 1,check_option: 1,created_at: 1})
 end
